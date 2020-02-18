@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Article' => $baseDir . '/app/Article.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -1332,7 +1333,6 @@ return array(
     'Illuminate\\Foundation\\Testing\\Constraints\\SoftDeletedInDatabase' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Constraints/SoftDeletedInDatabase.php',
     'Illuminate\\Foundation\\Testing\\DatabaseMigrations' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseMigrations.php',
     'Illuminate\\Foundation\\Testing\\DatabaseTransactions' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseTransactions.php',
-    'Illuminate\\Foundation\\Testing\\MockStream' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/MockStream.php',
     'Illuminate\\Foundation\\Testing\\PendingCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/PendingCommand.php',
     'Illuminate\\Foundation\\Testing\\RefreshDatabase' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/RefreshDatabase.php',
     'Illuminate\\Foundation\\Testing\\RefreshDatabaseState' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/RefreshDatabaseState.php',

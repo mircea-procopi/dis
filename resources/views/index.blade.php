@@ -41,12 +41,17 @@
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-@foreach($articles as $article)
+@foreach($article as $articles)
 
       <div class="col-md-4">
         <h2>{{$articles->title}}</h2>
         <p>{{$articles->description}} </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p>{{$articles->text}} </p>
+        <p>{{$articles->alias}} </p>
+        <p>{{$articles->img}} </p>
+        <p>{{$articles->meta_key}} </p>
+        <p>{{$articles->meta_desc}} </p>
+                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
 @endforeach()
 

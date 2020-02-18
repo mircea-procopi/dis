@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 18, 2020 at 08:31 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Хост: 127.0.0.1
+-- Время создания: Фев 18 2020 г., 21:34
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `article`
+-- База данных: `article`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `articles`
+-- Структура таблицы `articles`
 --
 
 CREATE TABLE `articles` (
@@ -37,39 +37,26 @@ CREATE TABLE `articles` (
   `img` varchar(25) NOT NULL,
   `meta_key` varchar(50) NOT NULL,
   `meta_desc` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `articles`
+-- Дамп данных таблицы `articles`
 --
 
 INSERT INTO `articles` (`id`, `title`, `description`, `text`, `alias`, `img`, `meta_key`, `meta_desc`) VALUES
-(1, 'Articolul 1', 'bla bla bla ', '', '', '', '', ''),
-(2, 'Articolul 2', 'bla bla bla ', '', '', '', '', ''),
-(3, 'Articolul 3', 'blghtjutye', '', '', '', '', ''),
-(4, 'Articolul 4', '', 'brgnth', '', '', '', ''),
-(5, 'Articolul 5', 'ehrtjjn', '', '', '', '', ''),
-(6, 'Articolul 6', '', 'nthjn', '', '', '', '');
+(1, 'Iphone 5', 'este cel mai bun telefon', '', '', '', '', ''),
+(2, 'Iphone 6', 'anul producerii 2014', '', '', '', '', ''),
+(3, 'Iphone 7', 'Producatorul Apple', 'Model	7:\r\nA1660 (cu modem Qualcomm)\r\nA1778 (cu modem Intel)\r\nA1779 (vândute în Japonia)\r\n', 'Reţele GSM, CDMA2000', 'Data lansării	16 septembr', 'Memorie internă	7: 2 GB LPDDR4 ', 'iPhone 7 detalii pe https://ro.wikipedia.org/wiki/IPhone_7');
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `articles`
+-- Индексы таблицы `articles`
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `articles`
---
-ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
