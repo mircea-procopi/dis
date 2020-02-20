@@ -41,19 +41,13 @@
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-@foreach($article as $articles)
+@if($article)
 
-      <div class="col-md-4">
-        <h2>{{$articles->title}}</h2>
-        <p>{{$articles->description}} </p>
-        <p>{{$articles->text}} </p>
-        <p>{{$articles->alias}} </p>
-        <p>{{$articles->img}} </p>
-        <p>{{$articles->meta_key}} </p>
-        <p>{{$articles->meta_desc}} </p>
+        <h2>{{$article->title}}</h2>
+        <p>{$article->text} </p>        
                 <p><a class="btn btn-secondary" href="https://www.apple.com/md/" role="button">Apple Detalii &raquo;</a></p>
       </div>
-@endforeach()
+@endif
 
     </div>
     <hr>
