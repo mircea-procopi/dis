@@ -12,4 +12,4 @@
 */
 
 Route::get('/','IndexController@index');
-Route::get('article/{id}', 'IndexControler@show')->name('articleShow');
+Route::get('/article/{id}', 'IndexControler@show')->name('articleShow');

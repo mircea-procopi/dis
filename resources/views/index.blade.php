@@ -27,6 +27,9 @@
        </div>
     </nav>
 
+@extends('layouts.site')
+
+@section('content')
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -34,24 +37,20 @@
     <div class="container">
     <h1 class="display-3">{{$hl}}</h1>
       <p>{{$ml}}</p>
-      <p><a class="btn btn-primary btn-lg" href="{{  route(articleShow',['id'=>$article->id])  }}" role="button">Foto Apple &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="#"  role="button">Foto Apple &raquo;</a></p>
     </div>
   </div>
 
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-@foreach($article as $articles)
 
-      <div class="col-md-4">
-        <h2>{{$articles->title}}</h2>
-        <p>{{$articles->description}} </p>
-        <p>{{$articles->text}} </p>
-        <p>{{$articles->alias}} </p>
-        <p>{{$articles->img}} </p>
-        <p>{{$articles->meta_key}} </p>
-        <p>{{$articles->meta_desc}} </p>
-                <p><a class="btn btn-secondary" href="https://www.apple.com/md/" role="button">Apple Detalii &raquo;</a></p>
+@foreach($article as $article)
+        <div class="col-md-4">
+        <h2>{{$article->title}}</h2>
+        <p>{{$article->description}} </p>
+       
+                 <p><a class="btn btn-secondary" href="{{route('articleShow', ['id'=>$article->id])}}" role="button">Apple Detalii &raquo;</a></p>
       </div>
 @endforeach()
 
@@ -59,8 +58,9 @@
     <hr>
   </div> <!-- /container -->
 </main>
+@endsection
 <footer class="container">
-  <p>&copy; 2020 Company, Inc.</p>
-</footer>
+        <p>&copy; 2020 Company, Inc.</p>
+    </footer>
 </body>
 </html>

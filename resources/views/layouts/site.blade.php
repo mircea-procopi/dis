@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Jumbotron Template · Bootstrap</title>
+    <title>Madalina</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet" >
     <link href="css/jumbotron.css" rel="stylesheet">
@@ -26,38 +26,10 @@
          </div>
        </div>
     </nav>
-
-    @extends('layouts.site')
     
-    @section('content')
-<main role="main">
+    @yield('content')
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-    <h1 class="display-3">{{$hl}}</h1>
-      <p>{{$ml}}</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Foto Apple &raquo;</a></p>
-    </div>
-  </div>
-
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-
-@if($article)
-
-        <h2>{{$article->title}}</h2>
-        <p>{!!$article->text!!} </p>        
-                
-@endif
-
-    </div>
-    <hr>
-  </div> <!-- /container -->
-</main>
-@endsection
-<footer class="container">
+    <footer class="container">
         <p>&copy; 2020 Company, Inc.</p>
     </footer>
 </body>
