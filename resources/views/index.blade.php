@@ -45,14 +45,15 @@
     <!-- Example row of columns -->
     <div class="row">
 
-@foreach($article as $article)
+@foreach($articles as $article)
         <div class="col-md-4">
         <h2>{{$article->title}}</h2>
-        <p>{{$article->description}} </p>
+        <p>{{$article->description}}</p>
+      
        
-                 <p><a class="btn btn-secondary" href="{{route('articleShow', ['id'=>$article->id])}}" role="button">Apple Detalii &raquo;</a></p>
+                 <p><a class="btn btn-secondary" href="{{ route('articleShow', ['id'=>$article->id])}}" role="button">Apple Detalii &raquo;</a></p>
       </div>
-@endforeach()
+@endforeach
 
     </div>
     <hr>
