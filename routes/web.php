@@ -1,5 +1,6 @@
-<?php
+<?php 
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +11,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/','IndexController@index');
-Route::get('/article/{id}', 'IndexControler@show')->name('articleShow');
+/*Route::get('/', function (){
+    return view('welcome');
+});
+*/
+Route::get('/', 'IndexController@index');
+Route::get('/article/{id}', 'IndexController@show')->name('articleShow');

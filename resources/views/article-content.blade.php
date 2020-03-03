@@ -30,6 +30,7 @@
     @extends('layouts.site')
     
     @section('content')
+    
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
